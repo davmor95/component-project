@@ -7,8 +7,8 @@ export const useFetch = (searchMethod, searchValue) => {
 
   if (searchValue !== undefined) param = searchValue;
 
-  const getAll = 'https://studentrestapi-env.eba-n2bvcmuw.us-east-1.elasticbeanstalk.com/api/students';
-  const getById = 'https://studentrestapi-env.eba-n2bvcmuw.us-east-1.elasticbeanstalk.com/api/students' + param;
+  const getAll = 'http://studentrestapi-env.eba-n2bvcmuw.us-east-1.elasticbeanstalk.com/api/students';
+  const getById = 'http://studentrestapi-env.eba-n2bvcmuw.us-east-1.elasticbeanstalk.com/api/students' + param;
   let url = null;
 
   switch (searchMethod) {
@@ -42,16 +42,16 @@ export const useFetch = (searchMethod, searchValue) => {
 };
 
 export function createStudent(student) {
-  return axios.post('https://studentrestapi-env.eba-n2bvcmuw.us-east-1.elasticbeanstalk.com/api/add/student', student);
+  return axios.post('http://studentrestapi-env.eba-n2bvcmuw.us-east-1.elasticbeanstalk.com/api/add/student', student);
 }
 
 export function updateStudent(student) {
   console.log('in the upate service');
-  return axios.put('https://studentrestapi-env.eba-n2bvcmuw.us-east-1.elasticbeanstalk.com/api/update/student', student);
+  return axios.put('http://studentrestapi-env.eba-n2bvcmuw.us-east-1.elasticbeanstalk.com/api/update/student', student);
 }
 
 export function deleteStudent(studentId) {
-  return axios.delete('httsp://studentrestapi-env.eba-n2bvcmuw.us-east-1.elasticbeanstalk.com/api/delete/student/' + studentId);
+  return axios.delete('http://studentrestapi-env.eba-n2bvcmuw.us-east-1.elasticbeanstalk.com/api/delete/student/' + studentId);
 }
 
 
