@@ -10,7 +10,7 @@ class StudentForm extends Component {
             firstName: props.student.firstName,
             lastName: props.student.lastName,
             email: props.student.email,
-            imagePath: props.student.imagePath,
+            imagePath: props.student.img,
             department: props.student.department
         };
         this.handleChange = this.handleChange.bind(this);

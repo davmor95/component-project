@@ -9,7 +9,7 @@ class Card extends Component {
         return (
             <div className="card" id={'card' + this.props.info.id}>
                 <Header firstName={this.props.info.firstName} lastName={this.props.info.lastName} />
-                <Body url={this.props.info.imagePath} email={this.props.info.email} dept={this.props.info.department} />
+                <Body url={this.props.info.img} email={this.props.info.email} dept={this.props.info.department} />
                 <Footer cardID={'card' + this.props.info.id} student = {this.props.info} studentID={this.props.info.id} handleDelete={this.props.handleDelete} handleUpdate={this.props.handleUpdate} />
             </div>
 
